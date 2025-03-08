@@ -1,0 +1,25 @@
+[project]
+name = "knowledge_agent"
+version = "0.1.0"
+description = "knowledge_agent using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.100.1,<1.0.0",
+    "google-generativeai>=0.8.4",
+]
+
+[project.scripts]
+knowledge_agent = "knowledge_agent.main:run"
+run_crew = "knowledge_agent.main:run"
+train = "knowledge_agent.main:train"
+replay = "knowledge_agent.main:replay"
+test = "knowledge_agent.main:test"
+start = "knowledge_agent.main:apply"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

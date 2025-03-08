@@ -1,0 +1,24 @@
+[project]
+name = "memory_implement"
+version = "0.1.0"
+description = "memory_implement using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.100.1,<1.0.0",
+    "google-generativeai>=0.8.4",
+]
+
+[project.scripts]
+memory_implement = "memory_implement.main:run"
+run_crew = "memory_implement.main:run"
+train = "memory_implement.main:train"
+replay = "memory_implement.main:replay"
+test = "memory_implement.main:deploy"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
