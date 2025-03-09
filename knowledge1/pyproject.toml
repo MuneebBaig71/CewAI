@@ -14,7 +14,7 @@ knowledge1 = "knowledge1.main:run"
 run_crew = "knowledge1.main:run"
 train = "knowledge1.main:train"
 replay = "knowledge1.main:replay"
-test = "knowledge1.main:deploy"
+run_crew = "knowledge1.main:deploy"
 
 [build-system]
 requires = ["hatchling"]
